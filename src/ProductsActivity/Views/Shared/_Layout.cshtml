@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+   
+    <div class="container">
+        <div class="navbar navbar-default">
+            @*<div class="container">*@
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a asp-controller="Home" asp-action="Index" class="navbar-brand">Home</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a asp-controller="Home" asp-action="Index">All Products</a></li>
+                        <li><a asp-controller="Home" asp-action="Create">Create Product</a></li>
+                    </ul>
+                </div>
+            @*</div>*@
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                @RenderBody()
+            </div>
+            <div class="col-md-3">
+               
+                    <p class="lead">Search our site:</p>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+
+                            </button>
+                        </span>
+                    </div>
+                    <br />
+                    <p class="lead">Contact Info:</p>
+                    <address>
+                        <strong>Twitter, Inc.</strong><br>
+                        795 Folsom Ave, Suite 600<br>
+                        San Francisco, CA 94107<br>
+                        <abbr title="Phone">P:</abbr>
+                        (123) 456-7890
+                    </address>
+
+                    <address>
+                        <strong>Full Name</strong><br>
+                        <a href="mailto:#">first.last@example.com</a>
+                    </address>
+               
+
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

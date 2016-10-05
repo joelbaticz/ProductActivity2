@@ -1,2 +1,2 @@
 # ProductActivity2
-Bootstrap example
+ASP.NET MVC Bootstrap demo.
